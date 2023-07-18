@@ -1,13 +1,16 @@
-import { Header } from "@/components";
+import { Container, Flex } from "theme-ui";
 
-import * as S from "./styles";
+import { Header, Summary } from "@/components";
 
 export function Transactions() {
   return (
     <>
-      <S.Wrapper className="container">
-        <Header />
-      </S.Wrapper>
+      <Container>
+        <Flex sx={{ flexDirection: "column", gap: 5 }}>
+          <Header />
+          <Summary />
+        </Flex>
+      </Container>
     </>
   );
 }

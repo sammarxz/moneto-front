@@ -1,16 +1,14 @@
-import { ThemeProvider } from "styled-components";
+import { ThemeUIProvider } from "theme-ui";
 
-import { defaultTheme } from "./styles/themes/default";
-import { GlobalStyle } from "./styles/globals";
+import { theme } from "./styles/themes/default";
 
 import { Transactions } from "./pages/Transactions";
 
 function App() {
   return (
-    <ThemeProvider theme={defaultTheme}>
-      <GlobalStyle />
+    <ThemeUIProvider theme={theme}>
       <Transactions />
-    </ThemeProvider>
+    </ThemeUIProvider>
   );
 }
 

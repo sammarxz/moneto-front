@@ -1,14 +1,14 @@
-import { Logo } from "../";
+import { Box, Button, Flex } from "theme-ui";
 
-import * as S from "./styles";
+import { Logo } from "../";
 
 export function Header() {
   return (
-    <S.Wrapper>
-      <S.Content>
+    <Box as="header" mt={5}>
+      <Flex sx={{ alignItems: "center" }}>
         <Logo />
-        <S.Button>Nova transação</S.Button>
-      </S.Content>
-    </S.Wrapper>
+        <Button ml="auto">Nova transação</Button>
+      </Flex>
+    </Box>
   );
 }

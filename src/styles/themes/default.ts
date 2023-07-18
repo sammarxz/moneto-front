@@ -1,20 +1,37 @@
-export const defaultTheme = {
-  white: "#fff",
+import { future } from "@theme-ui/presets";
 
-  "gray-100": "#E1E1E6",
-  "gray-300": "#C4C4CC",
-  "gray-400": "#8D8D99",
-  "gray-500": "#7C7C8A",
-  "gray-600": "#323238",
-  "gray-700": "#29292E",
-  "gray-800": "#202024",
-  "gray-900": "#121214",
-
-  "green-300": "#97FFD9",
-  "green-500": "#45FFBC",
-  "green-700": "#00D488",
-
-  "red-300": "#F75A68",
-  "red-500": "#AB222E",
-  "red-700": "#7A1921",
-} as const;
+export const theme = {
+  ...future,
+  fonts: {
+    body: "'Fira Sans', sans-serif",
+    heading: "Lora, serif",
+    monospace: "'Fira Mono', monospace",
+  },
+  links: {
+    logo: {
+      fontWeight: "bold",
+      color: "inherit",
+      textDecoration: "none",
+      fontFamily: "heading",
+      fontSize: 4,
+    },
+  },
+  buttons: {
+    primary: {
+      color: "background",
+      bg: "primary",
+      fontWeight: "bold",
+      cursor: "pointer",
+      "&:hover": {
+        bg: "primary.600",
+      },
+    },
+  },
+  layout: {
+    container: {
+      maxWidth: 640,
+      mx: "auto",
+      px: 4,
+    },
+  },
+};
