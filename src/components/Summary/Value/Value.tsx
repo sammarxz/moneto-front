@@ -14,7 +14,9 @@ export function Value({ type, value }: ValueProps) {
       return (
         <>
           <ArrowDownLeft sx={{ color: "primary" }} />
-          <Text color="gray.light">Entradas:</Text>
+          <Text color="gray.light" sx={{ display: ["none", "inline-block"] }}>
+            Entradas:
+          </Text>
         </>
       );
     }
@@ -22,14 +24,16 @@ export function Value({ type, value }: ValueProps) {
     return (
       <>
         <ArrowUpRight sx={{ color: "red" }} />
-        <Text color="gray.light">Saídas:</Text>
+        <Text color="gray.light" sx={{ display: ["none", "inline-block"] }}>
+          Saídas:
+        </Text>
       </>
     );
   }
 
   return (
     <Card>
-      <Flex sx={{ gap: 2, alignItems: "center" }}>
+      <Flex sx={{ gap: 2, alignItems: "center", flexWrap: "wrap" }}>
         {renderType()}
         <Text sx={{ fontWeight: "bold" }}>R$ {value}</Text>
       </Flex>

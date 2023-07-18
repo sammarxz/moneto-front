@@ -4,7 +4,7 @@ import { Logo } from "../";
 
 export function Header() {
   return (
-    <Box as="header" mt={5}>
+    <Box as="header">
       <Flex sx={{ alignItems: "center" }}>
         <Logo />
         <Button ml="auto">Nova transação</Button>

@@ -15,7 +15,6 @@ export const theme = {
         text: "#E1E1E6",
         background: "#1F1F1F",
         primary: "#0fc",
-        "primary.600": "#00C79F",
       },
     },
   },
@@ -40,9 +39,6 @@ export const theme = {
       fontWeight: "bold",
       cursor: "pointer",
       borderRadius: 8,
-      "&:hover": {
-        bg: "primary.600",
-      },
     },
   },
   layout: {
@@ -54,7 +50,9 @@ export const theme = {
   },
   cards: {
     primary: {
-      p: 3,
+      px: 3,
+      py: 1,
+      lineHeight: "44px",
       bg: "gray.dark",
       borderRadius: 8,
       border: "1px solid",
