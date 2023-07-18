@@ -1,12 +1,12 @@
 import { ThemeUIProvider } from "theme-ui";
 
-import { theme } from "./styles/themes/default";
+import { defaultTheme } from "@/styles/themes";
 
-import { Transactions } from "./pages/Transactions";
+import { Transactions } from "@/pages";
 
 function App() {
   return (
-    <ThemeUIProvider theme={theme}>
+    <ThemeUIProvider theme={defaultTheme}>
       <Transactions />
     </ThemeUIProvider>
   );
