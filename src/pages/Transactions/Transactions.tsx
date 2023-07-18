@@ -1,17 +1,17 @@
-import { Box, Container, Flex } from "theme-ui";
+import { Container, Flex } from "theme-ui";
 
-import { Header, Summary } from "@/components";
+import { Header, Summary, TransactionsList } from "@/components";
 
 export function Transactions() {
   return (
-    <Box my={5}>
+    <Flex my={5} sx={{ flexDirection: "column", gap: 5 }}>
       <Container>
         <Flex sx={{ flexDirection: "column", gap: 5 }}>
           <Header />
           <Summary />
         </Flex>
       </Container>
-      {/* <TransactionsList /> */}
-    </Box>
+      <TransactionsList />
+    </Flex>
   );
 }
